@@ -1,0 +1,17 @@
+site_name: ComputePods Mkdocs plugin
+
+site_url: https://computepods.github.io/mkdocs-computePods-plugin/
+
+repo_url: https://github.com/computePods/mkdocs-computePods-plugin
+
+plugins:
+  - search
+  - awesome-pages
+  - mermaid2
+  - compute-pods
+  - mkdocstrings:
+      watch:
+        - mkdocs_computePods_plugin
+
+theme:
+  name: material

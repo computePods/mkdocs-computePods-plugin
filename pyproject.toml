@@ -1,0 +1,27 @@
+[project]
+name = "ComputePodMkdocsPlugin"
+version = "0.0.1"
+description = "A simple mkdocs plugin for use by the ComputePods project."
+authors = [
+    {name = "Stephen Gaito", email = "stephen@perceptisys.co.uk"},
+]
+dependencies = [
+    "mkdocs~=1.2",
+]
+requires-python = ">=3.9"
+dynamic = ["classifiers"]
+license = {text = "Apache-2.0"}
+
+[project.urls]
+homepage = "https://github.com/computePods/mkdocs-computePods-plugin"
+
+[project.entry-points."mkdocs.plugins"]
+compute-pods = "mkdocs_computePods_plugin:ComputePods"
+
+[project.optional-dependencies]
+[build-system]
+requires = ["pdm-pep517"]
+build-backend = "pdm.pep517.api"
+
+[tool]
+[tool.pdm]
