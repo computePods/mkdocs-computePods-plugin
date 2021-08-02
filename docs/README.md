@@ -47,4 +47,4 @@ plugins:
 > it explicitly.
 
 More information about plugins in the [MkDocs
-documentation][mkdocs-plugins].
+documentation](https://www.mkdocs.org/user-guide/).
