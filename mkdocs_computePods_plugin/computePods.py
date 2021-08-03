@@ -11,8 +11,20 @@ class ComputePods(BasePlugin) :
   def __init__(self):
     log.info("Initialized ComputePods plugin")
 
-  def on_template_context(self, context, template_name, config) :
-    new_base_url = context['base_url'] + '/../'
-    new_base_url = new_base_url.replace('//', '/')
-    context['base_url'] = new_base_url
-    return context
+  def on_config(self, config) :
+    if 'extra' not in config :
+      config['extra'] = {}
+    config['extra']['homepage'] = "/"
+    return config
+
+  def on_env(self, env, config, files) :
+    env.globals['extracopyright'] = """&bull;
+<a href="https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin/" target="_blank">MkDocs Awesome Pages</a>
+&bull;
+<a href="https://mkdocstrings.github.io/" target="_blank">MkDocStrings</a>
+&bull;
+<a href="https://github.com/fralau/mkdocs-mermaid2-plugin" target="_blank">MkDocs Mermaid2</a>
+&bull;
+<a href="https://www.mkdocs.org" target="_blank">MkDocs</a>
+"""
+    return env
