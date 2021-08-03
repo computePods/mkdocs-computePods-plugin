@@ -8,8 +8,12 @@ contributed by [Byrne Reese](https://github.com/byrnereese) and is
 modified using [its original MIT
 license](https://github.com/byrnereese/mkdocs-plugin-template/blob/master/LICENSE).
 
-At the moment we simply use the `on_template_context` to override the
-`base_url` setting to match the base URL required by the ComputePods project.
+We use the `on_config` plugin hook to override the `extra.homepage`
+setting to match the base URL required by the ComputePods project.
+
+We also use the `on_env` plugin hook to add the extracopyright variable to
+the Jinja2 Environments globals. This allows us to add the additional
+Mkdocs plugins we use to maintain the ComputePods documentation.
 
 ## Installation
 
