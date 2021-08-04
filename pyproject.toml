@@ -1,6 +1,6 @@
 [project]
 name = "ComputePodMkdocsPlugin"
-version = "0.0.1"
+version = "0.0.2"
 description = "A simple mkdocs plugin for use by the ComputePods project."
 authors = [
     {name = "Stephen Gaito", email = "stephen@perceptisys.co.uk"},
